@@ -1,0 +1,30 @@
+后端：
+    npm包
+        -multer      解决上传文件的问题
+        -uuid        生成token
+        -express     框架，路由，服务器
+        -mysql2      解决数据库连接的问题 （mysql2/promise相较于mysql来说能够解决我们的回调地狱问题）
+        -cros        解决请求跨域问题
+
+    utils
+        -SnowFlake   解决我们的一个id生成的文件 （雪花id）
+
+    问题
+        -1. uuid 验证token 应该使用jwt来验证
+        -2. 分类表添加接口应该增加一个判断名字是否重复 防止出现重复的类名
+        -3. 当接口无法正确获取请求体中的数据时 mysql2会报错 导致服务器直接停止
+        -4. token验证中间件过于繁琐 可以使用jwt优化
+
+前端：
+    npm包
+        -axios      发送前端请求
+        -pinia      存储状态
+        -vue-router 路由
+        -naive ui   ul库
+        -wangEditor 富文本
+        
+    问题
+        -1. 使用pinia来装token，id，账户。 可以使用本地存储来存储token
+        -2. 富文本的数据双向绑定可以优化 可以使用pinia来优化
+        -3. axios的使用不规范，可以进行优化
+        -4. 文章删除没有再次确定，容易造成误删
